@@ -37,7 +37,6 @@ const Navigation = () => {
       isScrolled ? 'backdrop-blur-lg bg-black/30' : 'backdrop-blur-md bg-black/20'
     } rounded-2xl border border-gray-800/50 px-6 py-3`}>
       <div className="flex items-center justify-between">
-        <div className="font-poppins font-bold text-xl text-cyan-400">JZ</div>
         
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8">
