@@ -1,4 +1,3 @@
-import React from 'react';
 import { Code, Database, Globe, Smartphone, Zap, Users } from 'lucide-react';
 
 const SkillsSection = () => {

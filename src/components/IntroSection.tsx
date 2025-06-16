@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { ChevronDown, Download, Mail } from 'lucide-react';
 
 const IntroSection = () => {
