@@ -2,6 +2,12 @@ import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
 
 const ContactSection = () => {
+  // Helper to check if form is valid
+  const isFormValid = () =>
+    formData.name.trim() !== '' &&
+    formData.email.trim() !== '' &&
+    formData.subject.trim() !== '' &&
+    formData.message.trim() !== '';
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -40,19 +46,19 @@ const ContactSection = () => {
     {
       icon: <Mail className="w-6 h-6" />,
       label: "Email",
-      value: "jakopo@example.com",
-      href: "mailto:jakopo@example.com"
+      value: "jakopozhegrova.business@gmail.com",
+      href: "mailto:jakopozhegrova.business@gmail.com"
     },
     {
       icon: <Phone className="w-6 h-6" />,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567"
+      value: "+39 3319276043",
+      href: "#"
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       label: "Location",
-      value: "San Francisco, CA",
+      value: "Perugia, Umbria, Italy",
       href: "#"
     }
   ];
@@ -111,12 +117,9 @@ const ContactSection = () => {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full bg-gray-700/50 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-transparent focus:outline-none focus:border-cyan-400 transition-colors duration-300 peer"
+                    className="w-full bg-gray-700/50 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-400 transition-colors duration-300"
                     placeholder="Your Name"
                   />
-                  <label className="absolute left-4 top-3 text-gray-400 transition-all duration-300 peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-400 peer-focus:-top-2 peer-focus:left-2 peer-focus:text-cyan-400 peer-focus:text-sm peer-focus:bg-gray-800 peer-focus:px-2">
-                    Your Name
-                  </label>
                 </div>
 
                 <div className="relative">
@@ -126,12 +129,9 @@ const ContactSection = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full bg-gray-700/50 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-transparent focus:outline-none focus:border-cyan-400 transition-colors duration-300 peer"
+                    className="w-full bg-gray-700/50 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-400 transition-colors duration-300"
                     placeholder="Your Email"
                   />
-                  <label className="absolute left-4 top-3 text-gray-400 transition-all duration-300 peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-400 peer-focus:-top-2 peer-focus:left-2 peer-focus:text-cyan-400 peer-focus:text-sm peer-focus:bg-gray-800 peer-focus:px-2">
-                    Your Email
-                  </label>
                 </div>
               </div>
 
@@ -158,19 +158,21 @@ const ContactSection = () => {
                   onChange={handleInputChange}
                   required
                   rows={6}
-                  className="w-full bg-gray-700/50 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-transparent focus:outline-none focus:border-cyan-400 transition-colors duration-300 peer resize-none"
+                  className="w-full bg-gray-700/50 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-400 transition-colors duration-300 resize-none"
                   placeholder="Your Message"
                 ></textarea>
-                <label className="absolute left-4 top-3 text-gray-400 transition-all duration-300 peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-400 peer-focus:-top-2 peer-focus:left-2 peer-focus:text-cyan-400 peer-focus:text-sm peer-focus:bg-gray-800 peer-focus:px-2">
-                  Your Message
-                </label>
               </div>
 
-              <button
+                <button
                 type="submit"
-                disabled={isSubmitting || isSubmitted}
-                className="w-full bg-cyan-400 text-black py-3 rounded-lg font-semibold flex items-center justify-center gap-2 transition-all duration-300 hover:bg-cyan-300 hover:shadow-[0_0_16px_0_rgba(34,211,238,0.7)] disabled:opacity-50 disabled:cursor-not-allowed"
-              >
+                disabled={!isFormValid() || isSubmitting || isSubmitted}
+                className={`w-full bg-cyan-400 text-black py-3 rounded-lg font-semibold flex items-center justify-center gap-2 transition-all duration-300
+                  ${!isFormValid()
+                  ? 'opacity-50 cursor-not-allowed'
+                  : 'hover:bg-cyan-300 hover:shadow-[0_0_16px_0_rgba(34,211,238,0.7)]'
+                  }`
+                }
+                >
                 {isSubmitting ? (
                   <div className="w-5 h-5 border-2 border-black border-t-transparent rounded-full animate-spin"></div>
                 ) : isSubmitted ? (
