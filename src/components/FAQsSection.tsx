@@ -60,7 +60,7 @@ const FAQsSection = () => {
             <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700/50 overflow-hidden">
               <button
           onClick={() => toggleFAQ(index)}
-          className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-700/30 transition-colors duration-300"
+          className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-700/30 transition-colors duration-300 font-semibold hover:font-semibold"
               >
           <h3 className="font-poppins font-medium text-lg text-white pr-4">
             {faq.question}
@@ -89,7 +89,7 @@ const FAQsSection = () => {
           <p className="text-gray-400 mb-4">
             Still have questions?
           </p>
-          <button className="bg-cyan-400 text-black px-8 py-3 rounded-lg font-semibold hover:bg-cyan-300 transition-all duration-300 hover:scale-105">
+          <button className="bg-cyan-400 text-black px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-cyan-300 hover:shadow-[0_0_16px_0_rgba(34,211,238,0.7)]">
             Get in Touch
           </button>
         </div>

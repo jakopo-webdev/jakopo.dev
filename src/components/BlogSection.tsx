@@ -118,7 +118,7 @@ const BlogSection = () => {
         </div>
         
         <div className="text-center mt-12">
-          <button className="bg-cyan-400 text-black px-8 py-3 rounded-lg font-semibold hover:bg-cyan-300 transition-all duration-300 hover:scale-105">
+          <button className="bg-cyan-400 text-black px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-cyan-300 hover:shadow-[0_0_16px_0_rgba(34,211,238,0.7)]">
             View All Posts
           </button>
         </div>
