@@ -20,7 +20,7 @@ const IntroSection = () => {
   }, []);
 
   return (
-    <section id="intro" className="min-h-screen flex items-center justify-center relative px-4">
+    <section id="intro" className="min-h-screen flex items-center justify-center relative px-4 py-[6rem]">
       <div className="text-center max-w-4xl mx-auto">
         <div className="opacity-0 animate-fadeInUp">
           <h1 className="font-poppins font-bold text-6xl md:text-8xl mb-6 leading-tight">
@@ -54,10 +54,6 @@ const IntroSection = () => {
             Get In Touch
           </button>
         </div>
-      </div>
-      
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <ChevronDown className="text-cyan-400 w-8 h-8" />
       </div>
     </section>
   );

@@ -53,7 +53,7 @@ const SkillsSection = () => {
   };
 
   return (
-    <section id="skills" className="py-20 px-4">
+    <section id="skills" className="py-[6rem] px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-poppins font-bold text-4xl md:text-5xl mb-6 text-white">
