@@ -59,27 +59,27 @@ const FAQsSection = () => {
           {faqs.map((faq, index) => (
             <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700/50 overflow-hidden">
               <button
-                onClick={() => toggleFAQ(index)}
-                className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-700/30 transition-colors duration-300"
+          onClick={() => toggleFAQ(index)}
+          className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-700/30 transition-colors duration-300"
               >
-                <h3 className="font-poppins font-medium text-lg text-white pr-4">
-                  {faq.question}
-                </h3>
-                <ChevronDown 
-                  className={`w-5 h-5 text-cyan-400 transition-transform duration-300 flex-shrink-0 ${
-                    activeIndex === index ? 'rotate-180' : ''
-                  }`}
-                />
+          <h3 className="font-poppins font-medium text-lg text-white pr-4">
+            {faq.question}
+          </h3>
+          <ChevronDown 
+            className={`w-5 h-5 text-cyan-400 transition-transform duration-300 flex-shrink-0 ${
+              activeIndex === index ? 'rotate-180' : ''
+            }`}
+          />
               </button>
               
               <div className={`overflow-hidden transition-all duration-300 ${
-                activeIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          activeIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
               }`}>
-                <div className="px-6 pb-4">
-                  <p className="text-gray-300 leading-relaxed">
-                    {faq.answer}
-                  </p>
-                </div>
+          <div className="px-6 py-4">
+            <p className="text-gray-300 leading-relaxed">
+              {faq.answer}
+            </p>
+          </div>
               </div>
             </div>
           ))}
