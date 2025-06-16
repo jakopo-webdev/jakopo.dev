@@ -1,40 +1,13 @@
-import { useState, useEffect } from 'react';
-import { ChevronDown, Download, Mail } from 'lucide-react';
+import { Download, Mail } from 'lucide-react';
 
 const IntroSection = () => {
-  const [typedText, setTypedText] = useState('');
-  const fullText = "Web Developer";
-  
-  useEffect(() => {
-    let index = 0;
-    const typeInterval = setInterval(() => {
-      if (index < fullText.length) {
-        setTypedText(fullText.slice(0, index + 1));
-        index++;
-      } else {
-        clearInterval(typeInterval);
-      }
-    }, 100);
-
-    return () => clearInterval(typeInterval);
-  }, []);
-
   return (
     <section id="intro" className="min-h-screen flex items-center justify-center relative px-4 py-[6rem]">
       <div className="text-center max-w-4xl mx-auto">
         <div className="opacity-0 animate-fadeInUp">
-          <h1 className="font-poppins font-bold text-6xl md:text-8xl mb-6 leading-tight">
-            Jakopo
-            <br />
-            <span className="text-cyan-400 glow-cyan">Zhegrova</span>
+          <h1 className="font-poppins font-bold text-7xl my-8 leading-tight">
+            Hi, I'm <span className="text-cyan-400 glow-cyan">Jakopo</span>
           </h1>
-        </div>
-        
-        <div className="opacity-0 animate-fadeInUp animation-delay-200">
-          <h2 className="font-poppins font-medium text-2xl md:text-3xl mb-8 text-gray-300">
-            {typedText}
-            <span className="inline-block w-0.5 h-8 bg-cyan-400 ml-1 animate-pulse"></span>
-          </h2>
         </div>
         
         <div className="opacity-0 animate-fadeInUp animation-delay-400">
