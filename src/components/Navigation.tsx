@@ -26,7 +26,7 @@ const Navigation = () => {
 
   return (
     <nav className={`mt-4 fixed top-4 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300`}>
-      <div className="flex items-center justify-center gap-[10rem] bg-black/80 backdrop-blur-sm px-6 py-3 rounded-2xl border border-gray-800/50">
+      <div className="flex items-center justify-center gap-[10rem] bg-black/85 backdrop-blur-sm px-6 py-3 rounded-2xl border border-gray-800/50">
       {/* Desktop Menu */}
       <div className="hidden md:flex items-center space-x-8">
         {navItems.map((item) => (
@@ -52,7 +52,7 @@ const Navigation = () => {
       </div>
       {/* Mobile Menu Collapse */}
       {isMobileMenuOpen && (
-      <div className="md:hidden absolute left-0 right-0 top-full w-full bg-black/80 backdrop-blur-sm rounded-2xl border-t border-gray-800/50 z-40 animate-dropdown">
+      <div className="md:hidden absolute left-0 right-0 top-full w-full bg-black/85 backdrop-blur-sm rounded-2xl border-t border-gray-800/50 z-40 animate-dropdown">
         <div className="flex flex-col items-center">
         {navItems.map((item) => (
           <button
