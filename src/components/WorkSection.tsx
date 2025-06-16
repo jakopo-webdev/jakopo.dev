@@ -54,20 +54,17 @@ const WorkSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project) => (
-            <div key={project.id} className="group relative overflow-hidden rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105">
+            <div key={project.id} className="group relative overflow-hidden rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-110">
               <div className="relative overflow-hidden">
                 <img 
                   src={project.image} 
                   alt={project.title}
                   className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-60"></div>
+                {/* <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-60"></div> */}
                 <div className="absolute top-4 right-4 flex gap-2">
                   <a href={project.liveUrl} className="bg-black/50 backdrop-blur-sm p-2 rounded-lg text-white hover:text-cyan-400 transition-colors duration-300">
                     <ExternalLink size={16} />
-                  </a>
-                  <a href={project.githubUrl} className="bg-black/50 backdrop-blur-sm p-2 rounded-lg text-white hover:text-cyan-400 transition-colors duration-300">
-                    <Github size={16} />
                   </a>
                 </div>
               </div>

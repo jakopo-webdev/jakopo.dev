@@ -83,7 +83,6 @@ const BlogSection = () => {
                     index === 0 ? 'h-64' : 'h-48'
                   }`}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/20 to-transparent"></div>
                 <div className="absolute top-4 left-4">
                   <span className="bg-cyan-400 text-black px-3 py-1 rounded-full text-sm font-medium">
                     {post.category}
