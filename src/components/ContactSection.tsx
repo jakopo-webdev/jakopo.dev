@@ -30,7 +30,7 @@ const ContactSection = () => {
     setIsSubmitting(true);
     
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve => setTimeout(resolve, 6000));
     
     setIsSubmitting(false);
     setIsSubmitted(true);
@@ -39,7 +39,7 @@ const ContactSection = () => {
     setTimeout(() => {
       setIsSubmitted(false);
       setFormData({ name: '', email: '', subject: '', message: '' });
-    }, 3000);
+    }, 4000);
   };
 
   const contactInfo = [
@@ -170,23 +170,27 @@ const ContactSection = () => {
                   ${!isFormValid()
                   ? 'opacity-50 cursor-not-allowed'
                   : 'hover:bg-cyan-300 hover:shadow-[0_0_16px_0_rgba(34,211,238,0.7)]'
-                  }`
-                }
-                >
+                  }
+                  ${(isSubmitting || isSubmitted) ? 'hover:bg-cyan-400 hover:shadow-none' : ''}`
+                  
+                }>
                 {isSubmitting ? (
-                  <div className="w-5 h-5 border-2 border-black border-t-transparent rounded-full animate-spin"></div>
+                  <>
+                    <div className="w-5 h-5 border-2 border-black border-t-transparent rounded-full animate-spin mr-2"></div>
+                    <span>Sending...</span>
+                  </>
                 ) : isSubmitted ? (
                   <>
-                    <CheckCircle className="w-5 h-5" />
-                    Message Sent!
+                  <CheckCircle className="w-5 h-5" />
+                  Message Sent!
                   </>
                 ) : (
                   <>
-                    <Send className="w-5 h-5" />
-                    Send Message
+                  <Send className="w-5 h-5" />
+                  Send Message
                   </>
                 )}
-              </button>
+                </button>
             </form>
           </div>
         </div>
