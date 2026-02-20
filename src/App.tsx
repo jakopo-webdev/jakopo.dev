@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Navigation from './components/Navigation';
 import IntroSection from './components/IntroSection';
 import ExperienceSection from './components/ExperienceSection';
@@ -42,13 +42,11 @@ function App() {
         <ExperienceSection />
         <WorkSection />
         <SkillsSection />
-        <BlogSection />
         <ContactSection />
-        <FAQsSection />
       </main>
       
       <footer className="bg-black py-8 text-center text-gray-400">
-        <p>&copy; 2025 Jakopo Zhegrova. All rights reserved.</p>
+        <p>&copy; 2026 Jakopo Zhegrova. All rights reserved.</p>
       </footer>
     </div>
   );

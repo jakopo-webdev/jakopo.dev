@@ -4,31 +4,13 @@ const ExperienceSection = () => {
   const experiences = [
     {
       id: 1,
-      title: "Senior Full Stack Developer",
-      company: "TechCorp Solutions",
-      location: "Remote",
-      period: "2023 - Present",
-      description: "Lead development of enterprise-level web applications using React, Node.js, and cloud technologies. Mentored junior developers and implemented CI/CD pipelines.",
-      technologies: ["React", "Node.js", "TypeScript", "AWS", "Docker"]
+      title: "Frontend Web Developer",
+      company: "Puntozero s.c.a.r.l.",
+      location: "On-site",
+      period: "February 2025 - August 2025",
+      description: "During this internship, I had the opportunity to see for the first time how development works at a corporate level and to apply what I learned at ITS in the real world. Needless to say, it gave me a lot of motivation to grow and become someone in this field.",
+      technologies: ["HTML", "CSS", "JavaScript", "Git", "GitHub", "TypeScript", "Angular"]
     },
-    {
-      id: 2,
-      title: "Frontend Developer",
-      company: "StartupXYZ",
-      location: "San Francisco, CA",
-      period: "2021 - 2023",
-      description: "Built responsive web applications and improved user experience metrics by 40%. Collaborated with design teams to implement pixel-perfect interfaces.",
-      technologies: ["Vue.js", "JavaScript", "Sass", "Figma"]
-    },
-    {
-      id: 3,
-      title: "Web Developer",
-      company: "Digital Agency",
-      location: "New York, NY",
-      period: "2019 - 2021",
-      description: "Developed custom websites for clients across various industries. Focused on performance optimization and SEO best practices.",
-      technologies: ["HTML5", "CSS3", "JavaScript", "WordPress", "PHP"]
-    }
   ];
 
   return (

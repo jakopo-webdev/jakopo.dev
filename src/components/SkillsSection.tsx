@@ -1,43 +1,25 @@
-import { Code, Database, Globe, Smartphone, Zap, Users } from 'lucide-react';
+import { Database, Globe, Zap } from 'lucide-react';
 
 const SkillsSection = () => {
   const skillCategories = [
     {
       title: "Frontend Development",
       icon: <Globe className="w-8 h-8" />,
-      skills: ["React", "Vue.js", "TypeScript", "Tailwind CSS", "Next.js", "Nuxt.js"],
+      skills: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Angular"],
       color: "cyan"
     },
     {
       title: "Backend Development",
       icon: <Database className="w-8 h-8" />,
-      skills: ["Node.js", "Python", "PostgreSQL", "MongoDB", "Express.js", "Django"],
+      skills: ["Node.js", "Express.js", "PostgreSQL"],
       color: "blue"
-    },
-    {
-      title: "Mobile Development",
-      icon: <Smartphone className="w-8 h-8" />,
-      skills: ["React Native", "Flutter", "Expo", "iOS", "Android", "PWA"],
-      color: "purple"
     },
     {
       title: "DevOps & Tools",
       icon: <Zap className="w-8 h-8" />,
-      skills: ["Docker", "AWS", "Git", "CI/CD", "Linux", "Nginx"],
+      skills: ["Git", "GitHub", "Vercel"],
       color: "green"
     },
-    {
-      title: "Design & UX",
-      icon: <Code className="w-8 h-8" />,
-      skills: ["Figma", "Adobe XD", "Sketch", "Prototyping", "UI/UX", "Responsive Design"],
-      color: "pink"
-    },
-    {
-      title: "Soft Skills",
-      icon: <Users className="w-8 h-8" />,
-      skills: ["Team Leadership", "Communication", "Problem Solving", "Project Management", "Mentoring", "Agile"],
-      color: "yellow"
-    }
   ];
 
   const getColorClasses = (color: string) => {

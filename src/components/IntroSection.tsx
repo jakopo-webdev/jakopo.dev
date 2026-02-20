@@ -18,14 +18,14 @@ const IntroSection = () => {
         </div>
         
         <div className="opacity-0 animate-fadeInUp animation-delay-600 flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="bg-cyan-400 text-black px-8 py-4 rounded-lg font-semibold flex items-center justify-center gap-2 transition-all duration-300 hover:bg-cyan-300 hover:shadow-[0_0_16px_0_rgba(34,211,238,0.7)]">
+            <a href="https://drive.google.com/file/d/1oxSIPcHezoH69Ltj9rxv4tVMcwKjdFUN/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="bg-cyan-400 text-black px-8 py-4 rounded-lg font-semibold flex items-center justify-center gap-2 transition-all duration-300 hover:bg-cyan-300 hover:shadow-[0_0_16px_0_rgba(34,211,238,0.7)]">
             <Download size={20} />
             Download Resume
-          </button>
-          <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 flex items-center justify-center gap-2">
+            </a>
+            <a href="mailto:jakopozhegrova.business@gmail.com" className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 flex items-center justify-center gap-2">
             <Mail size={20} />
             Get In Touch
-          </button>
+            </a>
         </div>
       </div>
     </section>

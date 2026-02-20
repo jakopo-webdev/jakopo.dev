@@ -4,40 +4,21 @@ const WorkSection = () => {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with payment integration, inventory management, and admin dashboard.",
-      image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      liveUrl: "#",
-      githubUrl: "#"
+      title: "Ecominds",
+      description: "A project that competed in the Social Umbria Hackathon 2025",
+      image: "src/assets/ecominds-landing-page.png",
+      technologies: ["TypeScript", "Angular", "SCSS", "Vercel"],
+      liveUrl: "https://ecominds.vercel.app/",
+      githubUrl: "https://github.com/jakopo-webdev/ecominds"
     },
     {
       id: 2,
-      title: "Task Management App",
-      description: "Collaborative project management tool with real-time updates, file sharing, and team communication.",
-      image: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: ["Vue.js", "Firebase", "Vuetify", "Socket.io"],
-      liveUrl: "#",
-      githubUrl: "#"
+      title: "WorkTrack",
+      description: "A modern full-stack task management application",
+      image: "src/assets/worktrack-landing-page.png",
+      technologies: ["TypeScript", "React", "CSS", "Express.js", "PostgreSQL"],
+      githubUrl: "https://github.com/jakopo-webdev/worktrack"
     },
-    {
-      id: 3,
-      title: "Portfolio Website",
-      description: "Modern portfolio website with animations, dark mode, and responsive design for a creative agency.",
-      image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: ["Next.js", "Tailwind CSS", "Framer Motion", "Sanity"],
-      liveUrl: "#",
-      githubUrl: "#"
-    },
-    {
-      id: 4,
-      title: "Weather Dashboard",
-      description: "Real-time weather application with location-based forecasts, interactive maps, and weather alerts.",
-      image: "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: ["React", "OpenWeather API", "Chart.js", "Geolocation"],
-      liveUrl: "#",
-      githubUrl: "#"
-    }
   ];
 
   return (
@@ -56,11 +37,13 @@ const WorkSection = () => {
           {projects.map((project) => (
             <div key={project.id} className="group relative overflow-hidden rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-110">
               <div className="relative overflow-hidden">
-                <img 
-                  src={project.image} 
-                  alt={project.title}
-                  className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
-                />
+                {project.image && (
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                )}
                 {/* <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-60"></div> */}
                 <div className="absolute top-4 right-4 flex gap-2">
                   <a href={project.liveUrl} className="bg-black/50 backdrop-blur-sm p-2 rounded-lg text-white hover:text-cyan-400 transition-colors duration-300">
