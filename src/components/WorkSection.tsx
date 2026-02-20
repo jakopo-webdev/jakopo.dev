@@ -1,4 +1,6 @@
 import { ExternalLink, Github } from 'lucide-react';
+import ecomindsImg from '../assets/ecominds-landing-page.png';
+import worktrackImg from '../assets/worktrack-landing-page.png';
 
 const WorkSection = () => {
   const projects = [
@@ -6,7 +8,7 @@ const WorkSection = () => {
       id: 1,
       title: "Ecominds",
       description: "A project that competed in the Social Umbria Hackathon 2025",
-      image: "src/assets/ecominds-landing-page.png",
+      image: ecomindsImg,
       technologies: ["TypeScript", "Angular", "SCSS", "Vercel"],
       liveUrl: "https://ecominds.vercel.app/",
       githubUrl: "https://github.com/jakopo-webdev/ecominds"
@@ -15,7 +17,7 @@ const WorkSection = () => {
       id: 2,
       title: "WorkTrack",
       description: "A modern full-stack task management application",
-      image: "src/assets/worktrack-landing-page.png",
+      image: worktrackImg,
       technologies: ["TypeScript", "React", "CSS", "Express.js", "PostgreSQL"],
       githubUrl: "https://github.com/jakopo-webdev/worktrack"
     },
