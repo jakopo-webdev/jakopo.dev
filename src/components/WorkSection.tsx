@@ -19,6 +19,7 @@ const WorkSection = () => {
       description: "A modern full-stack task management application",
       image: worktrackImg,
       technologies: ["TypeScript", "React", "CSS", "Express.js", "PostgreSQL"],
+      liveUrl: "https://github.com/jakopo-webdev/worktrack",
       githubUrl: "https://github.com/jakopo-webdev/worktrack"
     },
   ];

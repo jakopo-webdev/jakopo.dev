@@ -60,15 +60,8 @@ const SkillsSection = () => {
               
               <div className="space-y-3">
                 {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="flex items-center justify-between">
+                  <div key={skillIndex} className="flex items-center">
                     <span className="text-gray-300">{skill}</span>
-                    <div className="flex space-x-1">
-                      {[...Array(5)].map((_, i) => (
-                        <div key={i} className={`w-2 h-2 rounded-full transition-colors duration-300 ${
-                          i < 4 ? 'bg-cyan-400' : 'bg-gray-600'
-                        }`}></div>
-                      ))}
-                    </div>
                   </div>
                 ))}
               </div>

@@ -23,7 +23,7 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-[6rem] px-4">
+    <section id="contact" className="py-[6rem] px-6 sm:px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-poppins font-bold text-4xl md:text-5xl mb-6 text-white">
@@ -44,16 +44,16 @@ const ContactSection = () => {
               <a
                 key={index}
                 href={info.href}
-                className="flex items-center space-x-4 bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl px-6 py-5 hover:border-cyan-400/50 transition-colors duration-300 group"
+                className="flex items-center space-x-4 w-full sm:w-auto bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl px-6 py-5 hover:border-cyan-400/50 transition-colors duration-300 group"
               >
-                <div className="bg-cyan-400/10 p-3 rounded-lg border border-cyan-400/20 group-hover:bg-cyan-400/20 transition-colors duration-300">
+                <div className="shrink-0 bg-cyan-400/10 p-3 rounded-lg border border-cyan-400/20 group-hover:bg-cyan-400/20 transition-colors duration-300">
                   <div className="text-cyan-400">
                     {info.icon}
                   </div>
                 </div>
-                <div>
+                <div className="min-w-0">
                   <p className="text-gray-400 text-sm">{info.label}</p>
-                  <span className="text-white group-hover:text-cyan-400 transition-colors duration-300 font-medium">
+                  <span className="text-white group-hover:text-cyan-400 transition-colors duration-300 font-medium break-all">
                     {info.value}
                   </span>
                 </div>
